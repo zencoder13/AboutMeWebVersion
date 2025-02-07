@@ -1,0 +1,47 @@
+<div class="projects" style="background: linear-gradient(to bottom, #2b5876, #4e4376); color: white;">
+  <h2>My Projects</h2>
+
+  <!-- Show a loading spinner while data is being fetched -->
+  <div *ngIf="loading" class="loading">
+    <p>Loading projects...</p>
+  </div>
+
+  <!-- Show error message if something went wrong -->
+  <div *ngIf="error" class="error">
+    <p>{{ error }}</p>
+  </div>
+
+  <!-- Display the list of projects -->
+  <div *ngIf="!loading && !error" class="row" style="display: grid;">
+    <div class="project-card" *ngFor="let project of projects">
+      <h3 class="card-name">{{ project.name }}</h3>
+      <p class="card-description">{{ project.description }}</p>
+      <div>
+        <a [href]="project.link" target="" class="btn btn-primary">View Project</a>
+        <a [href]="project.repo" target="" class="btn btn-outline">View Code</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card-name {
+    color: black;
+
+  }
+  .card-description {
+    color: black;
+  }
+  .btn-primary{
+    margin-right: 0px;
+  }
+
+  .btn-outline{
+    margin-left: 80px;
+  }
+
+  /* .project-card{
+    cursor: pointer;
+  } */
+
+</style>

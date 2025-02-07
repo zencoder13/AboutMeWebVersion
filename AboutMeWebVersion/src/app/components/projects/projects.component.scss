@@ -1,0 +1,58 @@
+//@import '/src/styles.scss';
+//@import "node_modules/bootstrap/scss/bootstrap";
+
+$primary-color: #2b5876;
+$secondary-color: #4e4376;
+$text-color: white;
+$bg-color: #f9f9f9;
+$font-family: 'Arial, sans-serif';
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0 4px 6px rgba($color, 0.1);
+}
+
+// Global Styles
+body {
+  font-family: $font-family;
+  background-color: $bg-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+.projects {
+    padding: 40px;
+    background-color: $bg-color;
+  
+    .project-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+      width: fit-content;
+  
+      &:hover {
+        transform: translateY(-5px);
+        @include box-shadow(#000);
+      }
+  
+      .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+  
+      .card-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+    }
+}

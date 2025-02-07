@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+//"~@fortawesome/fontawesome-free/css/all.css";
+// Variables
+$primary-color: #2b5876;
+$secondary-color: #4e4376;
+$text-color: black;
+//  white;
+$bg-color: #f9f9f9;
+$font-family: 'Arial, sans-serif';
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0 4px 6px rgba($color, 0.1);
+}
+
+// Global Styles
+body {
+  font-family: $font-family;
+  background-color: $bg-color;
+  color: $text-color;
+  margin: 10px;
+  padding: 0;
+  // background-image: url('../src/assets/images/Cosmos.jpg');
+}
+
+body {
+  // background-image: url('../src/assets/images/CosmosPng.png');
+  background-image: url('../src/assets/images/starry-background.png');
+  //background: linear-gradient(to bottom, #2b5876, #4e4376);
+  // margin: 0;
+  // font-family: Arial, sans-serif;
+  // color: white
+}

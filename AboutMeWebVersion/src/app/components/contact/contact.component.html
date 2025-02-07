@@ -1,0 +1,198 @@
+<!-- <div class="contact" style="background-color: linear-gradient(to bottom, #2b5876, #4e4376);">
+    
+    
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="formContact">
+      <h2>Contact Me</h2>
+    <p>Feel free to reach out for collaboration, inquiries, or just to say hello!</p>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" ngModel required class="form-control" />
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" ngModel required class="form-control" />
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" ngModel required class="form-control"></textarea>
+      </div>
+      
+      <button type="submit" class="btn btn-primary mktoButton" [disabled]="!contactForm.valid">Send Message</button>
+    </form>
+  </div> -->
+<div class="contact-container">
+  <div class="contact-header">
+    <h1>Contact Me</h1>
+    <p>
+      Let's connect to explore together! Whether you have a question, collaboration idea, or just want to say hello,
+      feel free to drop a
+      message below.
+    </p>
+  </div>
+
+  <div class="contact-form">
+    <form id="frmContact">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Your message"></textarea>
+      </div>
+
+      <button type="submit" class="send-btn">
+        <i class="fas fa-paper-plane"></i> Send Message
+      </button>
+    </form>
+  </div>
+
+  <div class="contact-social">
+    <p>Or reach me on:</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/vistriti-vardhan-6309b583" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <!-- <a href="https://www.linkedin.com/in/myprofile" class="btn" target="_blank" rel="noopener noreferrer"></a><i class="fab fa-linkedin"></i> -->
+      <a href="https://github.com" target="_blank"><i title="Connect on
+        LinkedIn" class="fab fa-github"></i></a>
+      <a href="mailto:vistriti13@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div>
+      <div id="myContact" class="contact-social">
+        <span>
+          <i class="fa fa-envelope"></i><label> Vistriti13&#64;gmail.com</label>
+        </span>
+      </div>
+      <div class="contact-social">
+        <span>
+          <i class="fa-solid fa-location-dot" style="margin-right: 2px;"></i><label>Mississauga, Ontario, Canada</label>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* .contact-container {
+    background-color: #fdf6e3;
+    /* Matches your current design */
+  /*  border: 2px solid #b30000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 50px auto;
+  }*/
+
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    border-style: solid;
+  }
+
+  .contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-header h1 {
+    font-size: 2.5rem;
+    color: #4e4376;
+    /* linear-gradient(to bottom, #2b5876, #4e4376); */
+    /* rgba(115, 0, 255, 0.449); */
+    /* rgb(115, 0, 255); */
+    /* #4caf50; */
+  }
+
+  .contact-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  /* .contact-form {
+    margin: 20px 0;
+  } */
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 98%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+
+  .send-btn {
+    background-color: #4e4376;
+    /* rgba(115, 0, 255, 0.449); */
+    /* #4caf50; */
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+  }
+
+  .send-btn:hover {
+    background-color: #45a049;
+  }
+
+  .contact-social {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .contact-social p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+    color: #555;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #4caf50;
+  }
+</style>
